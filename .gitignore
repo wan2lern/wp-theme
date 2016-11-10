@@ -11,4 +11,4 @@ node_modules
 
 # Secret files #
 ######################
-api-call.json
+mspecs-api-call.json
