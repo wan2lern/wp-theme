@@ -1,5 +1,6 @@
 <?php
 
+// define root of theme
 define("THEME_DIR", get_template_directory_uri());
 
 // remove version info meta
