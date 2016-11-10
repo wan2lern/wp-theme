@@ -34,7 +34,7 @@ add_action('wp_enqueue_scripts', 'mspecs_scripts');
 
 // register menu
 if (!function_exists('register_mspecs_theme_menus')) {
-    function register_cr8gr8designs_theme_menus() {
+    function register_mspecs_theme_menus() {
         register_nav_menus( array('main' => __('Main Menu')) );
     }
 }
