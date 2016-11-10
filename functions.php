@@ -13,6 +13,8 @@ function mspecs_scripts() {
     // styles
     wp_enqueue_style('main', get_stylesheet_uri() . '/css/main.css');
     wp_enqueue_style('flexbox', THEME_DIR . '/css/flexbox.css');
+    wp_enqueue_style('ie', THEME_DIR . '/css/ie.css');
+    wp_enqueue_style('ie7', THEME_DIR . '/css/ie7.css');
     
     // script
     wp_enqueue_script('jquery', THEME_DIR . '/js/vendor/jquery.min.js', '3.1.1', true);
