@@ -13,5 +13,5 @@ mspecs-api-call.json
 
 # Files not used yet #
 ######################
-/js/vendor/react-dom.js
-/js/vendor/react.js
+js/vendor/react-dom.js
+js/vendor/react.js
