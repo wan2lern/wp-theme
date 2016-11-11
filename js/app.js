@@ -21,9 +21,6 @@ $.ajax({
         let postLink = encodeURI(post.link);
         let postTitle = post.title.rendered;
         let postContent = post.content.rendered;
-        if(postLink === 'http://localhost/~d/wp') {
-            
-        }
         postArr.push('<article class="post"><a href="' + postLink + '"><h2>' + postTitle + '</h2></a>' + '<p>' + postContent + '</p></article>');
     });
     main.append(postArr);
@@ -40,7 +37,7 @@ $.ajax({
         let menuLink = encodeURI(page.link);
         let menuTitle = page.title.rendered;
         if(menuLink == 'http://localhost/~d/wp/') {
-            // 
+            menuArr.push('<li class="menu-item"><a href="' + menuLink + '">Välkommen</a></li>'); 
         } else {
             menuArr.push('<li class="menu-item"><a href="' + menuLink + '">' + menuTitle + '</a></li>');
         }
