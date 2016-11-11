@@ -31,13 +31,14 @@ $.ajax({
     'url': menuURL
 }).done(function (menuResponse) {
     // console.log(menuResponse);
+    // add home link first
     menuArr.push('<li class="menu-item active"><a href="http://localhost/~d/wp/">Välkommen Till MSPECS</a></li>');
     $.each(menuResponse, function (index, page) {
         let menuID = page.id;
         let menuLink = encodeURI(page.link);
         let menuTitle = page.title.rendered;
         if(menuLink == 'http://localhost/~d/wp/') {
-            menuArr.push('<li class="menu-item"><a href="' + menuLink + '">Välkommen</a></li>'); 
+            // menuArr.push('<li class="menu-item"><a href="' + menuLink + '">Välkommen</a></li>'); 
         } else {
             menuArr.push('<li class="menu-item"><a href="' + menuLink + '">' + menuTitle + '</a></li>');
         }

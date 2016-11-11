@@ -1,5 +1,7 @@
 <?php
 
+require_once('mspecs.php');
+
 // define root of theme
 define("THEME_DIR", get_template_directory_uri());
 
@@ -42,3 +44,8 @@ if (!function_exists('register_mspecs_theme_menus')) {
 
 // action hook => meny
 add_action('init', 'register_mspecs_theme_menus');
+
+
+
+
+

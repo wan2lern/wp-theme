@@ -7,6 +7,8 @@
 ######################
 node_modules
 
-# Secret files #
+# Non public files #
 ######################
 mspecs-api-call.json
+inc
+mspecs.php

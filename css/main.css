@@ -1,8 +1,5 @@
-body {
-    font: 100 1em/150% sans-serif;
-    width: 100%;
-    background-color: whitesmoke;
-}
+body {}
+
 .responsive-menu {
     transition: all 0.4s;
     -moz-transition: all 0.4s;
