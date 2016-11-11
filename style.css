@@ -1,7 +1,7 @@
 /*
 Theme Name: WP REST API Theme
 URI: http://mspecs.se
-Description: This theme is made with ES6, React.js (+ lot studying).
+Description: This theme is made with ES6, React.js for MSPECS.
 Version: 1.0.0
 Author: Daniel Karjanlahti, karjanlahti76@gmail.com
 Author URI: http://cr8gr8designs.com
@@ -13,6 +13,9 @@ body {
     font: 100 1em/150% sans-serif;
     width: 100%;
     background-color: whitesmoke;
+}
+ul {
+    list-style: none;
 }
 .responsive-menu {
     transition: all 0.4s;
@@ -26,9 +29,6 @@ body {
     height: 100%;
     padding: 75px 38px 38px 20px;
     background: rgba(20, 20, 20, .9);
-}
-.responsive-menu ul {
-    list-style: none;
 }
 .menu-item {
     width: 100%;
@@ -69,9 +69,12 @@ body {
     cursor: pointer;
 }
 #toggler {
+    position: absolute;
+    left: -9999px;
     display: none;
-    /*hide */
+    /* hide checkbox */
 }
+/* slide down menu */
 #toggler:checked + .responsive-menu {
     top: 0;
 }
