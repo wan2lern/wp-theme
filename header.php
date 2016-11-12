@@ -11,15 +11,13 @@
         <meta charset="utf-8">
         <!-- secures that the browser won't go into quirks mode -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        
+        <!-- Removes/resets standar dzoom iPad & iPhone) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--=== TITLE ===-->
         <title><?php if (!is_home()) { wp_title(); } else { echo 'Välkommen'; } ?> | <?php bloginfo('name'); ?></title>
 
         <meta name="description" content="<?php if (is_single()) { single_post_title('', true); } else { bloginfo('name'); echo " | "; bloginfo('description'); } ?>">
         <meta name="author" content="<?php echo AUTHOR; ?>">
-
-        <!-- Removes/resets standar dzoom iPad & iPhone) -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!--=== LINK TAGS ===-->
         <!-- Link to RSS-feed for the site. -->
@@ -53,4 +51,3 @@
             </div>
         </header>
         <div id="main" class="container-flex">
-

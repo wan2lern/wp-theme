@@ -2,8 +2,11 @@
 // define root of theme
 define("THEME_DIR", get_template_directory_uri());
 
+// THIS ONE DON'T WORK!?
 require_once('inc/mspecs.php');
-// require_once('inc/api.php');
+
+// THIS ONE WORKS!?
+require_once('inc/options.php');
 
 // remove version info meta
 remove_action('wp_head', 'wp_generator');
@@ -29,7 +32,7 @@ function mspecs_scripts() {
     
     // script
     wp_enqueue_script('jquery', THEME_DIR . '/js/vendor/jquery.min.js', '3.1.1', true);
-    wp_enqueue_script('app', THEME_DIR . '/js/app.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('app', THEME_DIR . '/js/app.js', array('jquery'), '1.0.1', true);
 }
 
 // action hook => styles & scripts

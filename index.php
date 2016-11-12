@@ -1,7 +1,4 @@
 <?php get_header(); ?>
-<div id="menu">
-    <!-- Loop menu here -->
-</div>
 <section id="main">
     <?php
     // check if user can edit options/is admin
