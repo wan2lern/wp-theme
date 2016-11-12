@@ -9,6 +9,4 @@ node_modules
 
 # Non public files #
 ######################
-mspecs-api-call.json
 inc
-mspecs.php
