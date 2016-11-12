@@ -1,5 +1,7 @@
 body {}
-
+body.logged-in.admin-bar {
+    padding-top: 2em;
+}
 .responsive-menu {
     transition: all 0.4s;
     -moz-transition: all 0.4s;

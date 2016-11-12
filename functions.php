@@ -1,9 +1,9 @@
 <?php
-
-require_once('mspecs.php');
-
 // define root of theme
 define("THEME_DIR", get_template_directory_uri());
+
+require_once('inc/mspecs.php');
+// require_once('inc/api.php');
 
 // remove version info meta
 remove_action('wp_head', 'wp_generator');
@@ -15,10 +15,6 @@ add_theme_support('menus');
 
 // enqueue styles & scripts
 function mspecs_scripts() {
-    // styles
-    wp_enqueue_style('mspecs-main', THEME_DIR . '/css/main.css');
-    wp_enqueue_style('mspecs-flexbox', THEME_DIR . '/css/flexbox.css');
-    
     // Load IE only stylesheet
 	wp_enqueue_style( 'mspecs-ie', THEME_DIR . "/css/ie.css", array( 'mspecs' ) );
 	wp_style_add_data( 'mspecs-ie', 'conditional', 'IE' );
@@ -27,8 +23,12 @@ function mspecs_scripts() {
 	wp_enqueue_style( 'mspecs-ie7', THEME_DIR . "/css/ie7.css", array( 'mspecs' ) );
 	wp_style_add_data( 'mspecs-ie7', 'conditional', 'IE 7' );
     
+    // styles
+    wp_enqueue_style('mspecs-flexbox', THEME_DIR . '/css/flexboxgrid.css', '2.0');
+    wp_enqueue_style('mspecs-main', THEME_DIR . '/css/main.css', '1.0.1');
+    
     // script
-    // wp_enqueue_script('jquery', THEME_DIR . '/js/vendor/jquery.min.js', '3.1.1', true);
+    wp_enqueue_script('jquery', THEME_DIR . '/js/vendor/jquery.min.js', '3.1.1', true);
     wp_enqueue_script('app', THEME_DIR . '/js/app.js', array('jquery'), '1.0.0', true);
 }
 
@@ -44,8 +44,3 @@ if (!function_exists('register_mspecs_theme_menus')) {
 
 // action hook => meny
 add_action('init', 'register_mspecs_theme_menus');
-
-
-
-
-
