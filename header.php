@@ -7,19 +7,19 @@
 <html class="no-js" <?php language_attributes(); ?>>
     <!--<![endif]-->
     <head>
-        <!--=== META TAGGAR ===-->
+        <!-- meta-tags -->
         <meta charset="utf-8">
         <!-- secures that the browser won't go into quirks mode -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <!-- Removes/resets standar dzoom iPad & iPhone) -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--=== TITLE ===-->
+        <!-- title -->
         <title><?php if (!is_home()) { wp_title(); } else { echo 'Välkommen'; } ?> | <?php bloginfo('name'); ?></title>
 
         <meta name="description" content="<?php if (is_single()) { single_post_title('', true); } else { bloginfo('name'); echo " | "; bloginfo('description'); } ?>">
         <meta name="author" content="<?php echo AUTHOR; ?>">
 
-        <!--=== LINK TAGS ===-->
+        <!-- link tags -->
         <!-- Link to RSS-feed for the site. -->
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS2 Feed" href="<?php bloginfo('rss2_url'); ?>">
 
@@ -28,7 +28,7 @@
 
         <script src="https://use.fontawesome.com/f22bfd3892.js"></script>
         <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>favicon.ico" type="image/x-icon">
-
+        <!-- head hook for scripts/styles -->
         <?php wp_head(); ?>
     </head>
 
@@ -50,4 +50,4 @@
                 </div>
             </div>
         </header>
-        <div id="main" class="container-flex">
+        <div id="main" class="container-fluid">
