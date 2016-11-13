@@ -1,6 +1,6 @@
 body {}
-body.logged-in.admin-bar {
-    padding-top: 2em;
+#wpadminbar .menu-icon {
+    margin-top: 2em !important;
 }
 .responsive-menu {
     transition: all 0.4s;

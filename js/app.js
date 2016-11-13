@@ -1,4 +1,4 @@
-document.addEventListener('load', function () {
+document.addEventListener("DOMContentLoaded", function () {
     var $ = jQuery.noConflict();
     $(".menu-item").click(function () {
         $(this).addClass("active").siblings().removeClass('active');
@@ -10,23 +10,31 @@ document.addEventListener('load', function () {
         postArr = [],
         menuArr = [],
         postURL = 'http://localhost/~d/wp/wp-json/wp/v2/posts',
-        menuURL = 'http://localhost/~d/wp/wp-json/wp/v2/pages';
+        menuURL = 'http://localhost/~d/wp/wp-json/wp/v2/pages',
+        url = window.location.href;
 
 
-    // posts
-    $.ajax({
-        'url': postURL
-    }).done(function (postResponse) {
-        console.log(postResponse);
-        $.each(postResponse, function (index, post) {
-            let postID = post.id;
-            let postLink = encodeURI(post.link);
-            let postTitle = post.title.rendered;
-            let postContent = post.content.rendered;
-            postArr.push('<article class="post"><a href="' + postLink + '"><h2>' + postTitle + '</h2></a>' + '<p>' + postContent + '</p></article>');
+    // If we are on front-page
+    if(url == 'http://localhost/~d/wp/') {
+        // posts
+        $.ajax({
+            'url': postURL
+        }).done(function (postResponse) {
+            console.log(postResponse);
+            $.each(postResponse, function (index, post) {
+                let postID = post.id;
+                let postLink = encodeURI(post.link);
+                let postTitle = post.title.rendered;
+                let postContent = post.content.rendered;
+                postArr.push('<article class="post"><a href="' + postLink + '"><h2>' + postTitle + '</h2></a>' + '<p>' + postContent + '</p></article>');
+            });
+            main.append(postArr);
         });
-        main.append(postArr);
-    });
+    // ..else render url
+    } /*else {
+        renderPage(url);
+    }*/
+    
 
     // menu
     $.ajax({
@@ -42,9 +50,17 @@ document.addEventListener('load', function () {
             if (menuLink == 'http://localhost/~d/wp/') {
                 // Link already added 
             } else {
-                menuArr.push('<li class="menu-item"><a href="' + menuLink + '">' + menuTitle + '</a></li>');
+                menuArr.push('<li class="menu-item" onclick="renderPage(' + menuLink + ')"><a href="' + menuLink + '">' + menuTitle + '</a></li>');
             }
         });
         menu.append(menuArr);
     });
+
+    /*function renderPage(currentURL) {
+        $.ajax({
+            'url': currentURL
+        }).done(function (postResponse) {
+            $('#main').load(postResponse);
+        });
+    }*/
 });
