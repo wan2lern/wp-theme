@@ -3,7 +3,7 @@
 define("THEME_DIR", get_template_directory_uri());
 
 // THIS ONE DON'T WORK!?
-require_once('inc/mspecs.php');
+// require_once('inc/mspecs.php');
 
 // THIS ONE WORKS!?
 require_once('inc/options.php');
