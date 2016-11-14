@@ -40,14 +40,15 @@
                     <label for="toggler" class="menu-icon">☰</label>
                     <input type="checkbox" id="toggler">
                     <div class="responsive-menu">
-                        <?php wp_nav_menu(array('theme_location' => 'main', 'container' => 'nav', 'container_class' => 'main-navigation')); ?>
+                        <ul id="output-menu"></ul>
                     </div>
                 </div>
                 <!-- Title & description -->
                 <div class="site-name">
-                    <h1 class="the-title"><a href='<?php echo esc_url(home_url('/')); ?>'><?php bloginfo('name'); ?></a></h1>
-                    <h2 class="the-description"><?php bloginfo('description'); ?></h2>
+                    <h1 class="the-title center"><a href='<?php echo esc_url(home_url('/')); ?>'><?php bloginfo('name'); ?></a></h1>
+                    <h2 class="the-description center"><?php bloginfo('description'); ?></h2>
                 </div>
             </div>
         </header>
+        <!-- Start WP REST API loop in #main -->
         <div id="main" class="container-fluid">
