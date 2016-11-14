@@ -2,11 +2,8 @@
 // define root of theme
 define("THEME_DIR", get_template_directory_uri());
 
-// THIS ONE DON'T WORK!?
-// require_once('inc/mspecs.php');
-
-// THIS ONE WORKS!?
-require_once('inc/options.php');
+/* Add MSPECS API settings page
+require_once('inc/options.php'); */
 
 // remove version info meta
 remove_action('wp_head', 'wp_generator');
@@ -29,7 +26,6 @@ function mspecs_scripts() {
     // styles
     wp_enqueue_style('mspecs-flexbox', THEME_DIR . '/css/flexboxgrid.css', '2.0');
     wp_enqueue_style('mspecs-main', THEME_DIR . '/css/main.css', '1.0.1');
-    wp_enqueue_style('mspecs-user-css', THEME_DIR . '/css/user_css.php', '1.0.0');
     
     // script
     wp_enqueue_script('jquery', THEME_DIR . '/js/vendor/jquery.min.js', '3.1.1', true);

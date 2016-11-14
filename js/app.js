@@ -35,8 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
             });
             main.append(postArr);
         });
+    // ..otherwise we are on single post/page
     } else {
         $.ajax({
+            // get post by slug (which is the title in lowercase + words concatenated with a dash -)
             'url': wpRestApiUrl + 'posts?slug=' + url.substring(23)
         }).done(function (postResponse) {
             $.each(postResponse, function (index, post) {
@@ -44,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let content = post.content.rendered;
                 let postLink = encodeURI(post.link);
                 let postTitle = post.title.rendered;
-                main.append('<article class="post row"><div class="col-xs-12"><a class="post-link" href="' + postLink + '" id="' + postID + '"><h2>' + postTitle + '</h2></a>' + content + '</div></article>');
+                main.append('<article class="post row"><div class="col-xs-12"><a class="post-link" href="' + postLink + '" id="' + postID + '"><h2 class="post-title">' + postTitle + '</h2></a>' + content + '</div></article>');
             });
         });
     }
@@ -69,17 +71,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         menu.append(menuArr);
     });
-
-    // Render page
-    function renderPage(theUrl) {
-        $.ajax({
-            'url': theUrl
-        }).done(function (reponseTxt) {
-            var output;
-            $.each(reponseTxt, function (index, field) {
-                output += '<div class="row">' + field + '</div>';
-            });
-            main.append(output);
-        });
-    }
 });
