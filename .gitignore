@@ -6,6 +6,7 @@
 # Package manager #
 ######################
 node_modules
+dist
 
 # Non public files #
 ######################
