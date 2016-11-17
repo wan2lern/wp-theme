@@ -20,37 +20,22 @@ To install this you will only need:
 This is a little cheatsheet for git commands:
 ```
 ##### Initialize project
-1. Get started by cloning this git project
-* git clone https://github.com/wan2lern/wp-theme.git
-2.  Move into the project
-* cd  project-text-name
-3. Make a local branch
-git branch local_branch
-4. Checkout into the local branch
-* git checkout local_repo
-5. Check git-project status
-* git status
-6. Pull from master branch
-* git pull origin master
-7. List all new or modified files that haven't yet been committed.
-* git status
-##### Make changes to project
+1. git clone https://github.com/wan2lern/wp-theme.git
+2. cd  project-text-name
+3. git branch local_branch
+4. git checkout local_repo
+5. git status
+6. git pull origin master
+7. git status
 8. Add changed files
-* git add .
-...eller
-* git add -A
-9. Commit 
-* git commit -m ''
-10. Push changes 
-* git push origin local_repo
-11. Checkout into master
-* git checkout master
-12. Merge local changes
-* git merge local_repo
-13. Merge local with master
-* git push origin master
-14. Checkout back into the local branch
-* git checkout local_repo
-15. Pull from master branch
-* git pull origin master
+8.1.1 git add .
+8.1.2 git add -A
+8.2 git commit -m 'msg'
+8.2.1 git commit -am 'msg'
+10. git push origin local_repo
+11. git checkout master
+12. git merge local_repo
+13. git push origin master
+14. git checkout local_repo
+15. git pull origin master
 ```
