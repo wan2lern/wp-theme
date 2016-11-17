@@ -27,7 +27,7 @@ This is a little cheatsheet for git commands:
 5. git status
 6. git pull origin master
 7. git status
-8. Add changed files
+8. \(Add changed files)
 8.1.1 git add .
 8.1.2 git add -A
 8.2 git commit -m 'msg'
