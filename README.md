@@ -34,13 +34,13 @@ This is a little cheatsheet for git commands:
 15. git pull origin master
 ```
 
-#### Git project workflow shell-script
+#### Git project workflow shell-script. Copy/paste the code and into a textfile & name the file & give the .sh extension: file-name.hs
 ```
 \#!/bin/sh
 \# addCommitPushToGithub.sh
 \# script to add, commit & push local branch to GitHub
 
-# Get local branch name
+\# Get local branch name
 echo 'Enter the name of local branch:'
 read branch
 
