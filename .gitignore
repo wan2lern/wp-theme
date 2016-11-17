@@ -7,8 +7,11 @@
 ######################
 # the node_modules is exessive of 240MB #
 node_modules
+
+# Unnesserary folders #
 styles
+js
 
 # Non public files #
 ######################
-inc
+mspecs
