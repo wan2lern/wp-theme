@@ -1,3 +1,4 @@
+/* This is the main JavaScript file which loads all dependencies */
 const jQuery = require('jquery');
 const React = require('react');
 const ReactDOM = require('react-dom');
@@ -20,10 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
         wpUrl = 'http://localhost/~d/wp/',
         url = window.location.href;
 
-    // Set active on link=href
+    // Set (link = href) ? ' active': '';
     $('.menu-item a').click(function (event) {
         event.preventDefault();
-        $(this).addClass("active").siblings().removeClass('active');
+        $(this).closest('li').addClass("active").siblings().removeClass('active');
         $('#toggler').removeAttr('checked');
     });
 
