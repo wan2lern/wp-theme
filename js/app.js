@@ -6,6 +6,7 @@ const Single = require('./components/single.js');
 const Loop = require('./components/loop.js');
 const Footer = require('./components/footer.js');
 
+// When the DOM is loaded, run code inside
 document.addEventListener("DOMContentLoaded", function () {
     var $ = jQuery.noConflict();
 
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         wpUrl = 'http://localhost/~d/wp/',
         url = window.location.href;
 
+    // Set active on link=href
     $('.menu-item a').click(function (event) {
         event.preventDefault();
         $(this).addClass("active").siblings().removeClass('active');
@@ -26,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     $('.post-link').each(function (e) {
-        
+        // serve page
     });
     
     // If we are on front-page, render posts
