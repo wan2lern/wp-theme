@@ -15,11 +15,7 @@ add_theme_support('menus');
 
 // enqueue styles & scripts
 function mspecs_scripts() {
-    // Load IE only stylesheet
-	/*wp_enqueue_style( 'mspecs-ie', THEME_DIR . "/css/ie.css", array( 'mspecs' ) );
-	wp_style_add_data( 'mspecs-ie', 'conditional', 'IE' );
-	wp_enqueue_style( 'mspecs-ie7', THEME_DIR . "/css/ie7.css", array( 'mspecs' ) );
-	wp_style_add_data( 'mspecs-ie7', 'conditional', 'IE 7' );
+    /*
     wp_enqueue_style('normalize', THEME_DIR . '/css/normalize.css', '5.0.0');
     wp_enqueue_style('mspecs-flexbox', THEME_DIR . '/css/flexboxgrid.css', '2.0');
     wp_enqueue_style('mspecs-main', THEME_DIR . '/css/main.css', '1.0.1');*/

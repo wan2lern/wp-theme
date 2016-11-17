@@ -5,6 +5,7 @@ const Header = require('./components/header.js');
 const Single = require('./components/single.js');
 const Loop = require('./components/loop.js');
 const Footer = require('./components/footer.js');
+require('../styles/main.scss');
 
 // When the DOM is loaded, run code inside
 document.addEventListener("DOMContentLoaded", function () {
