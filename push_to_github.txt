@@ -1,0 +1,36 @@
+#!/bin/bash
+
+## This is a script to add, commit & push local branch to GitHub
+## Replace .txt to .sh
+## Run the script with file-name.sh
+
+# Get commit message
+echo 'Enter commit message:'
+read commitMessage
+
+# add & commit
+git commit -am "$commitMessage"
+
+# Get local branch name
+echo 'Enter the name of local branch:'
+read branch
+
+# Push local branch
+git push origin $branch
+
+# Move to master
+git checkout master
+
+# Merge local branch with master
+git merge $branch
+
+# Push to master
+git push origin master
+
+# Go back to local branch
+git checkout $branch
+
+echo 'You have successfully added, commited & pushed local branch to GitHub'
+
+read
+## end of script
