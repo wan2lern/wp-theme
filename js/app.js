@@ -5,7 +5,6 @@ const Header = require('./components/header.js');
 const Single = require('./components/single.js');
 const Loop = require('./components/loop.js');
 const Footer = require('./components/footer.js');
-import '../styles/main.scss';
 
 document.addEventListener("DOMContentLoaded", function () {
     var $ = jQuery.noConflict();

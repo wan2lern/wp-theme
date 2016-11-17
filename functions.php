@@ -24,7 +24,7 @@ function mspecs_scripts() {
     wp_enqueue_style('mspecs-flexbox', THEME_DIR . '/css/flexboxgrid.css', '2.0');
     wp_enqueue_style('mspecs-main', THEME_DIR . '/css/main.css', '1.0.1');*/
     
-    wp_enqueue_style('mspecs-styles', THEME_DIR . '/styles/main.css', '1.0.0');
+    wp_enqueue_style('mspecs-styles', THEME_DIR . '/dist/main.css', '1.0.0');
     
     /*  Comment all. Use minified version: bundle.js
     wp_enqueue_script('jquery', THEME_DIR . '/js/vendor/jquery.min.js', '3.1.1', true);
@@ -34,7 +34,7 @@ function mspecs_scripts() {
     wp_enqueue_script('react-dom', THEME_DIR . '/js/vendor/react-dom.min.js', '15.3.2');
     wp_enqueue_script('app', THEME_DIR . '/js/app.js', array('jquery'), '1.0.1', true);*/
     
-    wp_enqueue_script('bundle', THEME_DIR . '/dist/main.min.js', '1.0.0', true);
+    wp_enqueue_script('bundle', THEME_DIR . '/dist/bundle.js', '1.0.0', true);
 }
 
 // action hook => styles & scripts

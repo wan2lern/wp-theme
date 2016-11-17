@@ -7,8 +7,7 @@
 ######################
 # the node_modules is exessive of 240MB #
 node_modules
-styles/main.css.map
-styles/main.css
+styles
 
 # Non public files #
 ######################

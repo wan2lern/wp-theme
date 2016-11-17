@@ -49,7 +49,7 @@
         <div id="main" class="container-fluid">
             <!-- Render result from WP REST API -->
         </div>
-        
+         <!--  -->
         <footer id="colophon">
             <div class="credits">
                 <p>&copy; <?php echo get_the_time('Y'); ?> <a href="http://www.mspecs.se" class="link">MSPECS</a></p>
