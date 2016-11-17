@@ -19,21 +19,38 @@ To install this you will only need:
 ### [GitHub](https://github.com) Git Terminal/ Workflow
 This is a little cheatsheet for git commands:
 ```
-1. Get started by cloning/initalizing git project
-* git clone [wp-theme](https://github.com/wan2lern/wp-theme.git)
-* git init
-2.  Move into the downloaded project
+##### Initialize project
+1. Get started by cloning this git project
+* git clone https://github.com/wan2lern/wp-theme.git
+2.  Move into the project
 * cd  project-text-name
-3. git status
-4. git checkout local_repo
-5. git pull origin master
-6. git status
-7. git add .
-8. git commit -m ''
-9. git push origin local_repo
-10. git checkout local_repo
-11. git merge local_repo
-12. git push origin master
-13. git checkout local_repo
-14. git pull origin master
+3. Make a local branch
+git branch local_branch
+4. Checkout into the local branch
+* git checkout local_repo
+5. Check git-project status
+* git status
+6. Pull from master branch
+* git pull origin master
+7. List all new or modified files that haven't yet been committed.
+* git status
+##### Make changes to project
+8. Add changed files
+* git add .
+...eller
+* git add -A
+9. Commit 
+* git commit -m ''
+10. Push changes 
+* git push origin local_repo
+11. Checkout into master
+* git checkout master
+12. Merge local changes
+* git merge local_repo
+13. Merge local with master
+* git push origin master
+14. Checkout back into the local branch
+* git checkout local_repo
+15. Pull from master branch
+* git pull origin master
 ```
