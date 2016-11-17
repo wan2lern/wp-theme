@@ -36,38 +36,37 @@ This is a little cheatsheet for git commands:
 
 #### Git project workflow shell-script. Copy/paste the code and into a textfile & name the file & give the .sh extension: file-name.hs
 ```
-\#!/bin/sh
-\# addCommitPushToGithub.sh
-\# script to add, commit & push local branch to GitHub
+#!/bin/sh
+# addCommitPushToGithub.sh
+# script to add, commit & push local branch to GitHub
 
 \# Get local branch name
 echo 'Enter the name of local branch:'
 read branch
 
-\# Get commit message
+# Get commit message
 echo 'Enter commit message:'
 read commitMessage
 
-\# add & commit
+# add & commit
 git commit -am "$commitMessage"
 
-\# Push local branch
+# Push local branch
 git push origin $branch
 
-\# Move to master
+# Move to master
 git checkout master
 
-\# Merge local branch with master
+# Merge local branch with master
 git merge $branch
 
-\# Push to master
+# Push to master
 git push origin master
 
-\# Go back to local branch
+# Go back to local branch
 git checkout $branch
 
 echo 'You have successfully added, commited & pushed local branch to GitHub'
 
 read
-exit
 ```
