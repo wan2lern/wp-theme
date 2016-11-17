@@ -40,7 +40,7 @@ This is a little cheatsheet for git commands:
 \# addCommitPushToGithub.sh
 \# script to add, commit & push local branch to GitHub
 
-\# Get local branch name
+# Get local branch name
 echo 'Enter the name of local branch:'
 read branch
 
