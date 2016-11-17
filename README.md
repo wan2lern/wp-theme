@@ -3,5 +3,5 @@ This theme gets data from the WP REST API alternatively from a public API with J
 
 ## Install wp-theme
 To install this you will only need:
-- To move the project into /wp-content/themes (& activate it).
+- To move the project into [homapage]/wp-content/themes (& activate it).
 - Install WP-REST-API plugin (& activate it).
