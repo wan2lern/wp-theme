@@ -31,5 +31,3 @@ git checkout $localBranch
 git pull origin master
 
 echo 'You have successfully added, commited & pushed local branch to GitHub'
-
-# read
