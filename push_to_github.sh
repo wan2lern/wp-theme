@@ -6,10 +6,10 @@
 git add .
 
 # Get commit message
-read -p "Enter commit message: " commitMessage
+read -p "Enter commit <message>: " commitMessage
 
 # add + commit
-read -p "Enter local branch name: " localBranch
+read -p "Enter <local> branch name: " localBranch
 git commit -am "$commitMessage"
 
 # Push local branch

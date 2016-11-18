@@ -1,12 +1,12 @@
 /* This is the main JavaScript file which loads all dependencies */
-const jQuery = require('jquery');
-const React = require('react');
-const ReactDOM = require('react-dom');
-const Header = require('./components/header.js');
-const Single = require('./components/single.js');
-const Loop = require('./components/loop.js');
-const Footer = require('./components/footer.js');
-require('../styles/main.scss');
+import jQuery from require('jquery');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Header from require('./components/header.js');
+import Single from require('./components/single.js');
+import Loop from require('./components/loop.js');
+import Footer from require('./components/footer.js');
+import Styles from require('../styles/main.scss');
 
 // When the DOM is loaded, run code inside
 document.addEventListener("DOMContentLoaded", function () {
