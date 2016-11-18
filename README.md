@@ -4,6 +4,6 @@ This theme gets data from the [WP REST API](http://v2.wp-api.org) alternatively 
 
 ## Install wp-theme
 To install this you will only need:
-- To move the project into /\[homapage-url]\/wp-content/themes \(& activate it\).
+- To move the project into /\[homapage-url]/wp-content/themes \(& activate it\).
 - Install [WP-REST-API plugin](https://wordpress.org/plugins/rest-api/) \(& activate it\). 
 > Read about the [WP-REST-API](http://v2.wp-api.org) documentation
