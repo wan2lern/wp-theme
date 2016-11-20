@@ -1,5 +1,5 @@
 #!/bin/bash
-# addCommitPushToGithub.sh
+# ./pushtogithub.sh
 # script to add, commit & push local branch to GitHub
 
 # add
