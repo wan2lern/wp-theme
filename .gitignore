@@ -8,10 +8,13 @@
 # the node_modules is exessive of 240MB #
 node_modules
 
-# Unnesserary folders #
-styles
-js
+# Create a folder dist in root. The compiler processes  which are created when running Terminal command: webpack -p #
+dist
 
 # Non public files #
 ######################
 mspecs
+
+# Non project files #
+######################
+push_to_github.sh

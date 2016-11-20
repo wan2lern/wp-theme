@@ -16,8 +16,11 @@ module.exports = {
             { test: /\.scss$/, loaders: ['style', 'css', 'sass'] }
         ]
     },
+    resolve: {
+        extensions: ['', '.js', '.jsx']
+    },
     output: {
         publicPath: 'http://localhost:8080/',
-        filename: './dist/bundle.js'
+        filename: BUILD_DIR + '/[name].min.js'
     }
 };

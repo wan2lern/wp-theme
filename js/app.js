@@ -57,11 +57,28 @@ document.addEventListener("DOMContentLoaded", function () {
         }).done(function (postResponse) {
             $.each(postResponse, function (index, links) {
                 let linkID = links.id;
+                let author = links.author;
                 let content = links.content.rendered;
                 let linkHref = encodeURI(links.link);
                 let linkTitle = links.title.rendered;
-                main.append('<article class="post row"><div class="col-xs-12"><a class="post-link" href="' + linkHref + '" id="' + linkID + '"><h2 class="post-title">' + linkTitle + '</h2></a>' + content + '</div></article>');
+                main.append('<article class="post row"><div class="col-xs-12"><a class="post-link" href="' + linkHref + '" id="' + linkID + '"><h2 class="post-title">' + linkTitle + '</h2>' + getAuthor(author) + content + '</div></article>');
             });
+        });
+    }
+    
+    function getAuthor(id) {
+        $.ajax({
+            'url': wpRestApiUrl + 'users/' + id
+        }).done(function (postResponse) {
+            console.log(wpRestApiUrl + 'users/' + id);
+            var author = '';
+            $.each(postResponse, function (index, user) {
+                let userID = user.id;
+                let name = user.name;
+                let userLink = encodeURI(user.link);
+                author = '<p class="author"><a class="post-link" href="' + userLink + '" id="' + userID + '">' + name + '</p>';
+            });
+            return 
         });
     }
 
