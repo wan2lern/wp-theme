@@ -6,11 +6,11 @@ module.exports = {
   output: {
     // this is used to generate URLs
     publicPath: 'http://localhost:8080/',
-    filename: './dist/[name].min.js'
+    filename: './dist/app.min.js'
   },
 
   /* generate source map */
-  devtool: 'source-map',
+  /* devtool: 'source-map', */
 
   module: {
     /* List of loaders: https://webpack.github.io/docs/list-of-loaders.html */
@@ -28,12 +28,12 @@ module.exports = {
         ]
       },
 
-      // load CSS
+      // 
+      /* Load CSS - The order of loaders is important here */
       {
         test: /\.scss$/,
         include: /src/,
         loaders: [
-           /* the order of loaders is important here */
            /* style-loader takes CSS and actually inserts it into the page */
            'style',
            /* css-loader takes a CSS file and returns the CSS with
