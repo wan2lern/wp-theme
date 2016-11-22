@@ -8,10 +8,10 @@
 import jQuery from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './components/header.js';
-import Single from './components/single.js';
-import Loop from './components/loop.js';
-import Footer from './components/footer.js';
+import Header from './components/header.jsx';
+import Single from './components/single.jsx';
+import Loop from './components/loop.jsx';
+import Footer from './components/footer.jsx';
 
 // When the DOM is loaded, run code inside
 document.addEventListener("DOMContentLoaded", function () {
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let postLink = encodeURI(post.link);
                 let postTitle = post.title.rendered;
                 let postExcerpt = post.excerpt.rendered;
-                postArr.push('<article class="post row"><div class="col-xs-12"><a class="post-link" href="' + postLink + '" id="' + postID + '"><h2>' + postTitle + '</h2></a>' + postExcerpt + '</div></article>');
+                postArr.push('<article class="entry-content row"><div class="col-xs-12"><a class="post-link" href="' + postLink + '" id="' + postID + '"><h2>' + postTitle + '</h2></a>' + postExcerpt + '</div></article>');
             });
             main.append(postArr);
         });

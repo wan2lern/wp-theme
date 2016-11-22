@@ -18,7 +18,7 @@ module.exports = {
 
       /* Transforms JSX and ES6+ into normal js files
        * use babel-loader for all *.js and *.jsx files
-       * using three presets: react, es2015, stage-0
+       * with three presets: react, es2015, stage-0
        * https://babeljs.io/docs/plugins/   */
       {
         test: /\.jsx?$/,
@@ -27,8 +27,6 @@ module.exports = {
           'babel?presets[]=stage-0,presets[]=react,presets[]=es2015'
         ]
       },
-
-      // 
       /* Load CSS - The order of loaders is important here */
       {
         test: /\.scss$/,

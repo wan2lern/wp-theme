@@ -5,16 +5,14 @@
 
 # Package manager #
 ######################
-# the node_modules is exessive of 240MB #
+## node_modules is over 240MB in size ##
 node_modules
 
-# Create a folder dist in root. The compiler processes  which are created when running Terminal command: webpack -p #
+## Create a folder dist in root ##
+## Run the command: webpack -p  ##
+## then you will have a app.min.js & a minified CSS file: main.css ##
 dist
 
 # Non public files #
 ######################
 mspecs
-
-# Non project files #
-######################
-push_to_github.sh

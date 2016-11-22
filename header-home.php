@@ -1,3 +1,4 @@
+<!-- Template Header home -->
 <!--[if IE]><![endif]-->
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js ie6"><![endif]-->

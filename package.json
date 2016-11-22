@@ -17,6 +17,9 @@
   "bugs": {
     "url": "https://github.com/wan2lern/wp-theme/issues"
   },
+  "babel": {
+    "presets": [ "es2015", "react", "stage-0" ]
+  },
   "homepage": "https://github.com/wan2lern/wp-theme#readme",
   "dependencies": {
     "babel-core": "^6.18.2",
