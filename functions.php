@@ -2,18 +2,18 @@
 // define root of theme
 define("THEME_DIR", get_template_directory_uri());
 
+require_once('estates.php');
+
 /* Add MSPECS API settings page
 require_once('inc/options.php'); */
 
 // remove version info meta
 remove_action('wp_head', 'wp_generator');
 
-// theme support
 add_theme_support('post-thumbnails');
 add_theme_support('html5', array('search-form'));
 add_theme_support('menus');
 
-// enqueue styles & scripts
 function mspecs_scripts() {
     wp_enqueue_style('mspecs-css', THEME_DIR . '/dist/main.css', '1.0.0');
     wp_enqueue_script('mspecs-js', THEME_DIR . '/dist/app.min.js', '1.0.0', true);
@@ -32,3 +32,4 @@ function add_read_more_link( $more ) {
 	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'mspecs') . '</a>';
 }
 add_filter( 'excerpt_more', 'add_read_more_link' );
+
