@@ -12,7 +12,7 @@
         <!-- secures that the browser won't go into quirks mode -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title><?php echo <?php bloginfo('name') . ' | ' . 'Välkommen'; ?></title>
+        <title><?php echo bloginfo('name') . ' | ' . 'Välkommen'; ?></title>
 
         <meta name="description" content="<?php if (is_single()) { single_post_title('', true); } else { bloginfo('name'); echo " | "; bloginfo('description'); } ?>">
         <meta name="author" content="<?php echo bloginfo('author'); ?>">
